@@ -1,0 +1,29 @@
+﻿<div class="row">
+	<h1>Complete Appointment With @Model.Name</h1>
+</div>
+
+<form class="form border p-3 rounded" action="/Doctor/Store">
+    <input type="hidden" name="DoctorId" value="@Model.Id" />
+    <div class="mb-3">
+        <label for="name" class="form-label">Patient Name</label>
+        <input type="text" class="form-control" id="name" name="PatientName" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="date" class="form-label">Appointment Date</label>
+                <input type="date" class="form-control" id="date" name="AppointmenDate" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="time" class="form-label">Appointment Time</label>
+                <input type="time" class="form-control" id="time" name="AppointmentTime" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Complete Appointment</button>
+</form>
